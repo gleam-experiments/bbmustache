@@ -1,0 +1,8 @@
+{"1.1.0",
+[{<<"bbmustache">>,{pkg,<<"bbmustache">>,<<"1.8.1">>},0},
+ {<<"gleam_stdlib">>,{pkg,<<"gleam_stdlib">>,<<"0.6.0">>},0}]}.
+[
+{pkg_hash,[
+ {<<"bbmustache">>, <<"22AF8AD50383B7022066C246486AAF2DB980E3883C6C620600E9299CAA420C10">>},
+ {<<"gleam_stdlib">>, <<"93D298A1DE4A65C7A8B18451AB761259B126DC7AB216AEB94D1541242618CE0B">>}]}
+].

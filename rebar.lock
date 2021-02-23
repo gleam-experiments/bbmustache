@@ -1,8 +1,11 @@
-{"1.1.0",
-[{<<"bbmustache">>,{pkg,<<"bbmustache">>,<<"1.10.0">>},0},
- {<<"gleam_stdlib">>,{pkg,<<"gleam_stdlib">>,<<"0.10.1">>},0}]}.
+{"1.2.0",
+[{<<"bbmustache">>,{pkg,<<"bbmustache">>,<<"1.11.0">>},0},
+ {<<"gleam_stdlib">>,{pkg,<<"gleam_stdlib">>,<<"0.14.0">>},0}]}.
 [
 {pkg_hash,[
- {<<"bbmustache">>, <<"DDC927463F0E95D66CDAC889153AF08015D609124D6D79006C248AD2DE7F6ECD">>},
- {<<"gleam_stdlib">>, <<"F123F33E03B5CDF5E19FC179B9EE81269DEB93F7DEFADB17EF2930E4DB9011E7">>}]}
+ {<<"bbmustache">>, <<"A6DBFC5CEE3E1D7D17AAD5F5B8880B4508D974611DA8D73E1F6C28BDE65D4C47">>},
+ {<<"gleam_stdlib">>, <<"765D90AC06F97D7A8E8F7AC4BEDA373879D98C78A27FD8DEACC98AA34DA2DDCE">>}]},
+{pkg_hash_ext,[
+ {<<"bbmustache">>, <<"7C9CDCF58DC043377AB792A8C7109D8902695FCAE3B35C1078A8B38DDCF86E5F">>},
+ {<<"gleam_stdlib">>, <<"9107F6A859CB96945AD9A099085DB028CA2BEBB3C8EA42EEC227B51C614CC2E0">>}]}
 ].

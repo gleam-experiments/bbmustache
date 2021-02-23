@@ -9,7 +9,7 @@ import gleam/bbmustache.{string}
 import gleam/expect
 
 pub fn main() {
-  let Ok(template) = bbmustache.compile("Hello, {{name}}!")
+  assert Ok(template) = bbmustache.compile("Hello, {{name}}!")
 
   let rendered = bbmustache.render(template, [
     string("name", "World"),

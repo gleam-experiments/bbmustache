@@ -23,7 +23,7 @@ pub fn compile_file(path: String) -> Result(Template, CompileError) {
 }
 
 // Template rendering
-pub external type Arg
+pub external type Argument
 
 type KeyType {
   Binary
@@ -33,37 +33,28 @@ type RenderOption {
   KeyType(KeyType)
 }
 
-external fn do_render(Template, List(Arg), List(RenderOption)) -> String =
+external fn do_render(
+  Template,
+  List(#(String, Argument)),
+  List(RenderOption),
+) -> String =
   "bbmustache" "compile"
 
-external fn unsafe_make_arg(a) -> Arg =
-  "gleam_stdlib" "identity"
-
-pub fn render(template, injecting args: List(Arg)) -> String {
+pub fn render(template, injecting args: List(#(String, Argument))) -> String {
   do_render(template, args, [KeyType(Binary)])
 }
 
-// Creating args to pass to render
-pub fn string(named key: String, of value: String) -> Arg {
-  unsafe_make_arg(tuple(key, value))
-}
+pub external fn int(of: Int) -> Argument =
+  "gleam_bbmustache_native" "argument"
 
-pub fn builder(named key: String, of value: StringBuilder) -> Arg {
-  unsafe_make_arg(tuple(key, value))
-}
+pub external fn string(of: String) -> Argument =
+  "gleam_bbmustache_native" "argument"
 
-pub fn object(named key: String, of value: List(Arg)) -> Arg {
-  unsafe_make_arg(tuple(key, value))
-}
+pub external fn builder(of: StringBuilder) -> Argument =
+  "gleam_bbmustache_native" "argument"
 
-pub fn strings(named key: String, of value: List(String)) -> Arg {
-  unsafe_make_arg(tuple(key, value))
-}
+pub external fn object(of: List(#(String, Argument))) -> Argument =
+  "gleam_bbmustache_native" "argument"
 
-pub fn builders(named key: String, of value: List(StringBuilder)) -> Arg {
-  unsafe_make_arg(tuple(key, value))
-}
-
-pub fn objects(named key: String, of value: List(List(Arg))) -> Arg {
-  unsafe_make_arg(tuple(key, value))
-}
+pub external fn list(of: List(Argument)) -> Argument =
+  "gleam_bbmustache_native" "argument"

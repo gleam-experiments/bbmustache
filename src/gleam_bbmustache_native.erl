@@ -1,8 +1,11 @@
 -module(gleam_bbmustache_native).
 
--export([try_catch/1]).
+-export([try_catch/1, argument/1]).
 
 try_catch(F) ->
-  try {ok, F()}
-  catch Error -> {error, Error}
-  end.
+    try {ok, F()}
+    catch Error -> {error, Error}
+    end.
+
+argument(V) ->
+    V.

@@ -1,5 +1,5 @@
 {application, gleam_bbmustache,
- [{description, "Fast mustache templates in Gleam using bbmustache"},
+ [{description, "Templates in Gleam using bbmustache"},
   {vsn, "1.0.0"},
   {registered, []},
   {applications,

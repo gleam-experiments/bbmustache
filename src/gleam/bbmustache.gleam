@@ -3,7 +3,14 @@ import gleam/string_builder.{StringBuilder}
 // Template compilation
 pub external type Template
 
-pub external type CompileError
+pub type CompileError {
+  FileNotFound
+  IncorrectSection(String)
+  InvalidDelimiters
+  UnclosedSection(String)
+  UnclosedTag
+  UnsupportedTag(String)
+}
 
 external fn try_catch(fn() -> a) -> Result(Template, CompileError) =
   "gleam_bbmustache_native" "try_catch"

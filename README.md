@@ -4,12 +4,12 @@ Gleam bindings to the [bbmustache][bbmustache] templating library.
 
 [bbmustache]: https://github.com/soranoba/bbmustache
 
-```rust
+```gleam
 import gleam/bbmustache.{string}
 import gleam/expect
 
 pub fn main() {
-  assert Ok(template) = bbmustache.compile("Hello, {{name}}!")
+  let assert Ok(template) = bbmustache.compile("Hello, {{name}}!")
 
   let rendered = bbmustache.render(template, [
     string("name", "World"),

@@ -1,5 +1,5 @@
 name = "gleam_bbmustache"
-version = "2.1.0"
+version = "2.2.0"
 licences = ["Apache-2.0"]
 description = "Templates in Gleam using bbmustache"
 
@@ -14,4 +14,4 @@ gleam_stdlib = "~> 0.19"
 bbmustache = "~> 1.12"
 
 [dev-dependencies]
-gleeunit = "~> 0.5"
+gleeunit = "~> 1.0"

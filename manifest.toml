@@ -3,11 +3,11 @@
 
 packages = [
   { name = "bbmustache", version = "1.12.2", build_tools = ["rebar3"], requirements = [], otp_app = "bbmustache", source = "hex", outer_checksum = "688B33A4D5CC2D51F575ADF0B3683FC40A38314A2F150906EDCFC77F5B577B3B" },
-  { name = "gleam_stdlib", version = "0.30.1", build_tools = ["gleam"], requirements = [], otp_app = "gleam_stdlib", source = "hex", outer_checksum = "704258528887F95075FFED7AAE1CCF836A9B88E3AADA2F69F9DA15815F94A4F9" },
-  { name = "gleeunit", version = "0.11.0", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleeunit", source = "hex", outer_checksum = "1397E5C4AC4108769EE979939AC39BF7870659C5AFB714630DEEEE16B8272AD5" },
+  { name = "gleam_stdlib", version = "0.34.0", build_tools = ["gleam"], requirements = [], otp_app = "gleam_stdlib", source = "hex", outer_checksum = "1FB8454D2991E9B4C0C804544D8A9AD0F6184725E20D63C3155F0AEB4230B016" },
+  { name = "gleeunit", version = "1.0.2", build_tools = ["gleam"], requirements = ["gleam_stdlib"], otp_app = "gleeunit", source = "hex", outer_checksum = "D364C87AFEB26BDB4FB8A5ABDE67D635DC9FA52D6AB68416044C35B096C6882D" },
 ]
 
 [requirements]
 bbmustache = { version = "~> 1.12" }
 gleam_stdlib = { version = "~> 0.19" }
-gleeunit = { version = "~> 0.5" }
+gleeunit = { version = "~> 1.0" }

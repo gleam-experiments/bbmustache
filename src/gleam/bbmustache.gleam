@@ -1,4 +1,4 @@
-import gleam/string_builder.{StringBuilder}
+import gleam/string_builder.{type StringBuilder}
 
 // Template compilation
 pub type Template

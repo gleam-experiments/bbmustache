@@ -6,16 +6,14 @@ Gleam bindings to the [bbmustache][bbmustache] templating library.
 
 ```gleam
 import gleam/bbmustache.{string}
-import gleam/expect
+import gleeunit/should
 
 pub fn main() {
   let assert Ok(template) = bbmustache.compile("Hello, {{name}}!")
 
-  let rendered = bbmustache.render(template, [
-    string("name", "World"),
-  ])
+  let rendered = bbmustache.render(template, [#("name", string("World"))])
 
-  expect.equal(rendered, "Hello, World!")
+  should.equal(rendered, "Hello, World!")
 }
 ```
 

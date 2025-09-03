@@ -3,7 +3,7 @@ version = "2.2.0"
 licences = ["Apache-2.0"]
 description = "Templates in Gleam using bbmustache"
 
-repository = { type = "github", user = "gleam-experiments", repo = "bbmustache" }
+repository = { type = "github", user = "gleam-experiments", repo = "bbmustache", tag-prefix = "chaplin-" }
 links = [
   { title = "Website", href = "https://gleam.run" },
   { title = "Sponsor", href = "https://github.com/sponsors/lpil" },

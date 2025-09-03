@@ -1,4 +1,4 @@
--module(gleam_bbmustache_native).
+-module(chaplin_ffi).
 
 -export([try_catch/1, argument/1]).
 

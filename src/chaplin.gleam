@@ -1,8 +1,9 @@
-import gleam/string_builder.{type StringBuilder}
+import gleam/string_tree.{type StringTree}
 
-// Template compilation
+/// A template that be rendered with some arguments using the `render` function.
 pub type Template
 
+/// The error that can happen when compiling a template.
 pub type CompileError {
   FileNotFound
   IncorrectSection(String)
@@ -12,7 +13,7 @@ pub type CompileError {
   UnsupportedTag(String)
 }
 
-@external(erlang, "gleam_bbmustache_native", "try_catch")
+@external(erlang, "chaplin_ffi", "try_catch")
 fn try_catch(a: fn() -> a) -> Result(Template, CompileError)
 
 @external(erlang, "bbmustache", "parse_binary")
@@ -29,7 +30,7 @@ pub fn compile_file(path: String) -> Result(Template, CompileError) {
   try_catch(fn() { throwing_compile_file(path) })
 }
 
-// Template rendering
+/// An argument that can be given to the template when rendering it.
 pub type Argument
 
 type KeyType {
@@ -51,17 +52,20 @@ pub fn render(template, injecting args: List(#(String, Argument))) -> String {
   do_render(template, args, [KeyType(Binary)])
 }
 
-@external(erlang, "gleam_bbmustache_native", "argument")
+@external(erlang, "chaplin_ffi", "argument")
 pub fn int(of of: Int) -> Argument
 
-@external(erlang, "gleam_bbmustache_native", "argument")
+@external(erlang, "chaplin_ffi", "argument")
+pub fn float(of of: Int) -> Argument
+
+@external(erlang, "chaplin_ffi", "argument")
 pub fn string(of of: String) -> Argument
 
-@external(erlang, "gleam_bbmustache_native", "argument")
-pub fn builder(of of: StringBuilder) -> Argument
+@external(erlang, "chaplin_ffi", "argument")
+pub fn string_tree(of of: StringTree) -> Argument
 
-@external(erlang, "gleam_bbmustache_native", "argument")
+@external(erlang, "chaplin_ffi", "argument")
 pub fn object(of of: List(#(String, Argument))) -> Argument
 
-@external(erlang, "gleam_bbmustache_native", "argument")
+@external(erlang, "chaplin_ffi", "argument")
 pub fn list(of of: List(Argument)) -> Argument

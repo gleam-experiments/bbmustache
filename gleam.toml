@@ -1,17 +1,18 @@
-name = "gleam_bbmustache"
-version = "2.2.0"
+name = "chaplin"
+version = "1.0.0"
 licences = ["Apache-2.0"]
-description = "Templates in Gleam using bbmustache"
+description = "Mustache text templates using Erlang's bbmustache package"
 
-repository = { type = "github", user = "gleam-experiments", repo = "bbmustache", tag-prefix = "chaplin-" }
+repository = { type = "github", user = "lpil", repo = "bbmustache", tag-prefix = "chaplin-" }
 links = [
-  { title = "Website", href = "https://gleam.run" },
+  { title = "Mustache", href = "https://mustache.github.io/" },
+  { title = "bbmustache", href = "https://github.com/soranoba/bbmustache" },
   { title = "Sponsor", href = "https://github.com/sponsors/lpil" },
 ]
 
 [dependencies]
-gleam_stdlib = "~> 0.19"
-bbmustache = "~> 1.12"
+bbmustache = ">= 1.12.2 and < 2.0.0"
+gleam_stdlib = ">= 0.62.1 and < 1.0.0"
 
 [dev-dependencies]
-gleeunit = "~> 1.0"
+gleeunit = ">= 1.6.1 and < 2.0.0"

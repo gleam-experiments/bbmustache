@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.0 - 2025-09-03
+
+- Released as `chaplin`.
+
+# Changelog as `gleam_bbmustache`
+
 ## v2.2.0 - 2024-01-18
 
 - Updated for Gleam v0.34.0.

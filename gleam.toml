@@ -3,7 +3,7 @@ version = "1.0.0"
 licences = ["Apache-2.0"]
 description = "Mustache text templates using Erlang's bbmustache package"
 
-repository = { type = "github", user = "lpil", repo = "bbmustache", tag-prefix = "chaplin-" }
+repository = { type = "github", user = "lpil", repo = "chaplin", tag-prefix = "chaplin-" }
 links = [
   { title = "Mustache", href = "https://mustache.github.io/" },
   { title = "bbmustache", href = "https://github.com/soranoba/bbmustache" },
